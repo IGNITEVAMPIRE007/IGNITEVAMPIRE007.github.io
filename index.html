@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angeleena Raphel — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed; /* violet */
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#071126);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+
+    /* Container */
+    .wrapper{max-width:1100px;margin:48px auto;padding:28px}
+
+    /* Header / Nav */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+    nav a:hover{color:white;background:var(--glass)}
+    .cta{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#051021;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .hero h1{margin:0 0 8px;font-size:36px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+
+    /* Profile card */
+    .profile{background:var(--card);padding:22px;border-radius:12px;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:16px;margin:0 auto 12px;background:linear-gradient(180deg,#13263f,#0f1b2a);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff}
+    .name{font-size:20px;font-weight:700}
+    .sub{color:var(--muted);font-size:14px;margin-bottom:14px}
+    .socials{display:flex;gap:10px;justify-content:center}
+    .socials a{text-decoration:none;color:var(--muted);padding:8px;border-radius:8px}
+
+    /* Sections */
+    section{margin-top:28px}
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .section-title h2{margin:0;font-size:18px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* Contact */
+    .contact-form{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    .contact-form input,.contact-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .contact-form textarea{grid-column:1 / -1;min-height:120px}
+    .btn{padding:12px 14px;border-radius:10px;border:none;background:var(--accent);color:#051021;font-weight:700;cursor:pointer}
+
+    /* Footer */
+    footer{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .profile{order:-1}
+      .contact-form{grid-template-columns:1fr}
+      .contact-form textarea{grid-column:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">
+        <div class="logo">AR</div>
+        <div>
+          <div style="font-weight:700">Angeleena Raphel</div>
+          <div style="font-size:12px;color:var(--muted)">CSE Student — Vidya Academy of Science and Technology</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire / Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Hi — I'm Angeleena.</h1>
+        <p>Computer Science student building meaningful web apps, experimenting with ML, and crafting intuitive UI/UX. Currently studying at Vidya Academy of Science and Technology.</p>
+        <div class="badges">
+          <div class="badge">CSE · Undergrad</div>
+          <div class="badge">Web Developer</div>
+          <div class="badge">Java · Python · C++</div>
+          <div class="badge">React · Node.js</div>
+        </div>
+
+        <section id="about" style="margin-top:20px">
+          <div class="section-title"><h2>About me</h2></div>
+          <p style="color:var(--muted)">I enjoy turning ideas into code. I work on full-stack web projects and learning machine learning. I love collaborating and contributing to open-source projects. Below are a few highlights of my work and skills.</p>
+        </section>
+
+      </div>
+
+      <aside class="profile">
+        <div class="avatar">AR</div>
+        <div class="name">Angeleena Raphel</div>
+        <div class="sub">CSE — Vidya Academy of Science and Technology</div>
+        <div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px">
+          <a class="cta" href="#projects">See Projects</a>
+          <a style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--muted)" href="#contact">Resume</a>
+        </div>
+        <div class="socials">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </aside>
+    </div>
+
+    <section id="projects">
+      <div class="section-title"><h2>Selected Projects</h2></div>
+      <div class="projects">
+        <article class="project">
+          <h3>College Portal (Full-stack)</h3>
+          <p>A portal for students to view schedules, submit assignments and collaborate. Built with React, Node.js and MongoDB.</p>
+        </article>
+
+        <article class="project">
+          <h3>Chatbot with NLP</h3>
+          <p>Rule-based chatbot prototype for campus help and FAQ using Python and spaCy.</p>
+        </article>
+
+        <article class="project">
+          <h3>Image Classifier</h3>
+          <p>Convolutional Neural Network model trained on a small dataset to classify objects — demo and notebook available.</p>
+        </article>
+
+        <article class="project">
+          <h3>Mini OS Shell</h3>
+          <p>A simple command-line shell implemented in C++ for learning process management and file I/O.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title"><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="badge">HTML &amp; CSS</div>
+        <div class="badge">JavaScript &amp; React</div>
+        <div class="badge">Node.js &amp; Express</div>
+        <div class="badge">Python &amp; ML</div>
+        <div class="badge">C / C++</div>
+        <div class="badge">Git &amp; GitHub</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
+        <div class="hero-card">
+          <h3>Get in touch</h3>
+          <p style="color:var(--muted)">Want to collaborate or have a project idea? Drop a message — I usually reply within a few days.</p>
+          <div style="margin-top:12px">
+            <div style="color:var(--muted);font-size:13px">Email</div>
+            <div style="font-weight:700">youremail@example.com</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px">Location</div>
+            <div style="font-weight:700">Kerala, India</div>
+          </div>
+        </div>
+
+        <form class="hero-card contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message..." required></textarea>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <div>© <strong>Angeleena Raphel</strong> — {2025}</div>
+        <div style="color:var(--muted)">Built with ❤️ — HTML &amp; CSS</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
