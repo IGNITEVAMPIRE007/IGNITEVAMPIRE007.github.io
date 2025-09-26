@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,12 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#7c3aed; /* violet */
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
+      --bg:#0d0c1d; /* deep violet/black */
+      --card:#1a1033;
+      --muted:#c4b5fd;
+      --accent:#ff00aa; /* pink neon */
+      --accent2:#00f5ff; /* cyan neon */
+      --glass: rgba(255,255,255,0.06);
+      --radius:16px;
       color-scheme: dark;
     }
     *{box-sizing:border-box}
@@ -20,11 +21,11 @@
     body{
       margin:0;
       font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),#071126);
-      color:#e6eef8;
+      background:linear-gradient(135deg,var(--bg),#17002c);
+      color:#f3e8ff;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      line-height:1.4;
+      line-height:1.5;
     }
 
     /* Container */
@@ -33,46 +34,47 @@
     /* Header / Nav */
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 0 20px var(--accent)}
     nav{display:flex;gap:14px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
-    nav a:hover{color:white;background:var(--glass)}
-    .cta{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#051021;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:0.3s}
+    nav a:hover{color:white;background:var(--glass);box-shadow:0 0 12px var(--accent2)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#051021;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 0 15px var(--accent)}
 
     /* Hero */
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px;align-items:center}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-    .hero h1{margin:0 0 8px;font-size:36px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.05),transparent);padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,0.7)}
+    .hero h1{margin:0 0 8px;font-size:40px;color:var(--accent2);text-shadow:0 0 8px var(--accent)}
     .hero p{color:var(--muted);margin:0 0 16px}
     .badges{display:flex;gap:10px;flex-wrap:wrap}
-    .badge{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+    .badge{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.07);color:#fff;font-weight:600;box-shadow:0 0 10px rgba(255,255,255,0.1)}
 
     /* Profile card */
-    .profile{background:var(--card);padding:22px;border-radius:12px;text-align:center}
-    .avatar{width:160px;height:160px;border-radius:16px;margin:0 auto 12px;background:linear-gradient(180deg,#13263f,#0f1b2a);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff}
-    .name{font-size:20px;font-weight:700}
+    .profile{background:var(--card);padding:22px;border-radius:14px;text-align:center;box-shadow:0 0 15px var(--accent)}
+    .avatar{width:160px;height:160px;border-radius:20px;margin:0 auto 12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;box-shadow:0 0 20px var(--accent)}
+    .name{font-size:22px;font-weight:800;color:var(--accent2)}
     .sub{color:var(--muted);font-size:14px;margin-bottom:14px}
     .socials{display:flex;gap:10px;justify-content:center}
-    .socials a{text-decoration:none;color:var(--muted);padding:8px;border-radius:8px}
+    .socials a{text-decoration:none;color:var(--muted);padding:8px;border-radius:8px;transition:0.3s}
+    .socials a:hover{color:white;background:var(--glass);box-shadow:0 0 10px var(--accent2)}
 
     /* Sections */
-    section{margin-top:28px}
+    section{margin-top:36px}
     .section-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-    .section-title h2{margin:0;font-size:18px}
-    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px}
-    .project h3{margin:0 0 8px;font-size:16px}
+    .section-title h2{margin:0;font-size:20px;color:var(--accent)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+    .project{background:linear-gradient(180deg,rgba(255,255,255,0.05),transparent);padding:16px;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,0.6)}
+    .project h3{margin:0 0 8px;font-size:17px;color:var(--accent2)}
     .project p{margin:0;color:var(--muted);font-size:14px}
     .skills{display:flex;gap:10px;flex-wrap:wrap}
 
     /* Contact */
     .contact-form{display:grid;gap:10px;grid-template-columns:1fr 1fr}
-    .contact-form input,.contact-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .contact-form input,.contact-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.02);color:inherit}
     .contact-form textarea{grid-column:1 / -1;min-height:120px}
-    .btn{padding:12px 14px;border-radius:10px;border:none;background:var(--accent);color:#051021;font-weight:700;cursor:pointer}
+    .btn{padding:12px 14px;border-radius:12px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#051021;font-weight:800;cursor:pointer;box-shadow:0 0 12px var(--accent2)}
 
     /* Footer */
-    footer{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:14px}
+    footer{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.07);color:var(--muted);font-size:14px;text-align:center}
 
     /* Responsive */
     @media (max-width:900px){
@@ -97,6 +99,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#gaming">Gaming</a>
         <a href="#contact">Contact</a>
         <a class="cta" href="#contact">Hire / Contact</a>
       </nav>
@@ -115,7 +118,7 @@
 
         <section id="about" style="margin-top:20px">
           <div class="section-title"><h2>About me</h2></div>
-          <p style="color:var(--muted)">I enjoy turning ideas into code. I work on full-stack web projects and learning machine learning. I love collaborating and contributing to open-source projects. Below are a few highlights of my work and skills.</p>
+          <p style="color:var(--muted)">I enjoy turning ideas into code. I work on full-stack web projects and learning machine learning. I love collaborating and contributing to open-source projects. Below are a few highlights of my work, skills, and even my hobbies.</p>
         </section>
 
       </div>
@@ -126,7 +129,7 @@
         <div class="sub">CSE — Vidya Academy of Science and Technology</div>
         <div style="display:flex;gap:10px;justify-content:center;margin-bottom:12px">
           <a class="cta" href="#projects">See Projects</a>
-          <a style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--muted)" href="#contact">Resume</a>
+          <a style="padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.07);text-decoration:none;color:var(--muted)" href="#contact">Resume</a>
         </div>
         <div class="socials">
           <a href="#">GitHub</a>
@@ -173,6 +176,15 @@
       </div>
     </section>
 
+    <section id="gaming">
+      <div class="section-title"><h2>Gaming</h2></div>
+      <div class="hero-card">
+        <h3>My Favourite Game</h3>
+        <p style="color:var(--muted)">In my free time, I love gaming as it relaxes me and also sharpens my strategy and teamwork skills. My favorite game is <strong>Valorant</strong> — a tactical first-person shooter by Riot Games. I enjoy competing with friends, practicing precision, and exploring the vibrant eSports community around it.</p>
+        <p style="color:var(--muted)">Gaming inspires me to think critically, stay focused under pressure, and have fun while collaborating. It’s one of the best ways I balance studies with hobbies.</p>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="section-title"><h2>Contact</h2></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
@@ -197,10 +209,7 @@
     </section>
 
     <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-        <div>© <strong>Angeleena Raphel</strong> — {2025}</div>
-        <div style="color:var(--muted)">Built with ❤️ — HTML &amp; CSS</div>
-      </div>
+      <div>© <strong>Angeleena Raphel</strong> — 2025 | Built with ❤️ in HTML &amp; CSS</div>
     </footer>
 
   </div>
